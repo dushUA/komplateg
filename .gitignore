@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+
+# Environment files that may contain sensitive data
+.env
+
+# bundler state
+/.bundle
+/vendor/bundle/
+/vendor/ruby/
+
+# various artifacts
+.sass-cache
+/config/database.yml
+/coverage.data
+/coverage/
+/doc/*
+/public/cache
+/public/stylesheets/compiled
+/public/system/*
+/spec/tmp/*
+/cache
+/capybara*
+/capybara-*.html
+/gems
+/specifications
+rerun.txt
+.zeus.sock
+
+# scm revert files
+**.orig
+
+# Mac finder artifacts
+.DS_Store
+
+# vim artifacts
+**.swp

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails komplateg: development" uuid="7fc7fca1-26ed-4029-a539-3a7a06769430">
+    <database-info product="PostgreSQL" version="9.4.7" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
+      <database id="1" name="komplateg_development"/>
+      <schema id="2" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-timestamp>2016-04-17.21:28:49.489</introspection-timestamp>
+      </schema>
+    </database-model>
+  </data-source>
+  <data-source name="Rails komplateg: production" uuid="1e88c918-99fb-491c-8f28-4eb700116bcf">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails komplateg: test" uuid="ee4c507e-9291-4963-a73f-8274b3834b1d">
+    <database-info product="PostgreSQL" version="9.4.7" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
+      <database id="1" name="komplateg_test"/>
+      <schema id="2" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-timestamp>2016-04-17.20:39:37.676</introspection-timestamp>
+      </schema>
+    </database-model>
+  </data-source>
+</component>
