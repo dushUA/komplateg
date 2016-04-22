@@ -10,8 +10,83 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-timestamp>2016-04-17.21:28:49.489</introspection-timestamp>
+        <introspection-state-number>804</introspection-state-number>
+        <introspection-timestamp>2016-04-22.07:50:47.236</introspection-timestamp>
       </schema>
+      <sequence id="3" parent="2" name="payers_id_seq">
+        <object-id>16520</object-id>
+        <state-number>804</state-number>
+      </sequence>
+      <table id="4" parent="2" name="payers">
+        <object-id>16522</object-id>
+        <state-number>804</state-number>
+      </table>
+      <table id="5" parent="2" name="schema_migrations">
+        <object-id>16513</object-id>
+        <state-number>802</state-number>
+      </table>
+      <column id="6" parent="4" name="id">
+        <state-number>804</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;payers_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="7" parent="4" name="id_main">
+        <state-number>804</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="8" parent="4" name="fio">
+        <state-number>804</state-number>
+        <data-type>varchar</data-type>
+      </column>
+      <column id="9" parent="4" name="adress">
+        <state-number>804</state-number>
+        <data-type>varchar</data-type>
+      </column>
+      <column id="10" parent="4" name="invoice">
+        <state-number>804</state-number>
+        <data-type>varchar</data-type>
+      </column>
+      <column id="11" parent="4" name="telephone">
+        <state-number>804</state-number>
+        <data-type>varchar</data-type>
+      </column>
+      <column id="12" parent="4" name="bank_payer">
+        <state-number>804</state-number>
+        <data-type>varchar</data-type>
+      </column>
+      <column id="13" parent="4" name="created_at">
+        <state-number>804</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="14" parent="4" name="updated_at">
+        <state-number>804</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <index id="15" parent="4" name="payers_pkey">
+        <object-id>16529</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="16" parent="4" name="payers_pkey">
+        <columns>id</columns>
+        <underlying-index>payers_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="17" parent="5" name="version">
+        <state-number>802</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar</data-type>
+      </column>
+      <index id="18" parent="5" name="unique_schema_migrations">
+        <object-id>16519</object-id>
+        <columns>version</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
     </database-model>
   </data-source>
   <data-source name="Rails komplateg: production" uuid="1e88c918-99fb-491c-8f28-4eb700116bcf">
