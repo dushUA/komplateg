@@ -1,0 +1,29 @@
+%h1 Listing acceptors
+
+%table
+  %thead
+    %tr
+      %th Name acceptor
+      %th Bank acceptor
+      %th Account acceptor
+      %th Key acceptor
+      %th Mfo acceptor
+      %th
+      %th
+      %th
+
+  %tbody
+    - @acceptors.each do |acceptor|
+      %tr
+        %td= acceptor.name_acceptor
+        %td= acceptor.bank_acceptor
+        %td= acceptor.account_acceptor
+        %td= acceptor.key_acceptor
+        %td= acceptor.mfo_acceptor
+        %td= link_to 'Show', acceptor
+        %td= link_to 'Edit', edit_acceptor_path(acceptor)
+        %td= link_to 'Destroy', acceptor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Acceptor', new_acceptor_path

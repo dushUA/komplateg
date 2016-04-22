@@ -1,0 +1,25 @@
+= form_for @acceptor do |f|
+  - if @acceptor.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@acceptor.errors.count, "error")} prohibited this acceptor from being saved:"
+      %ul
+        - @acceptor.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name_acceptor
+    = f.text_field :name_acceptor
+  .field
+    = f.label :bank_acceptor
+    = f.text_field :bank_acceptor
+  .field
+    = f.label :account_acceptor
+    = f.text_field :account_acceptor
+  .field
+    = f.label :key_acceptor
+    = f.text_field :key_acceptor
+  .field
+    = f.label :mfo_acceptor
+    = f.text_field :mfo_acceptor
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name acceptor:
+  = @acceptor.name_acceptor
+%p
+  %b Bank acceptor:
+  = @acceptor.bank_acceptor
+%p
+  %b Account acceptor:
+  = @acceptor.account_acceptor
+%p
+  %b Key acceptor:
+  = @acceptor.key_acceptor
+%p
+  %b Mfo acceptor:
+  = @acceptor.mfo_acceptor
+
+= link_to 'Edit', edit_acceptor_path(@acceptor)
+\|
+= link_to 'Back', acceptors_path
