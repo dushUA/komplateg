@@ -1,0 +1,12 @@
+= form_tag({action: :create}, multipart: true) do
+  =file_field_tag :file
+  =submit_tag 'Upload'
+%p
+  Stat:
+  =@pdf_stat
+%p
+  Fonts:
+  =@pdf_fonts
+%p
+  Text:
+  =@pdf_text
