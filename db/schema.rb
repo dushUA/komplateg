@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160422054120) do
+ActiveRecord::Schema.define(version: 20160425074236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,29 @@ ActiveRecord::Schema.define(version: 20160422054120) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
+
+  create_table "operations", force: :cascade do |t|
+    t.datetime "date_time_pay"
+    t.date     "date_valut"
+    t.string   "num_ticket"
+    t.string   "code_ticket"
+    t.string   "key_operation"
+    t.text     "destination"
+    t.money    "sum_operation",      scale: 2
+    t.string   "currency_operation"
+    t.string   "priv_acc_payer"
+    t.date     "period_pay_start"
+    t.date     "period_pay_end"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "payer_id"
+    t.integer  "acceptor_id"
+    t.integer  "service_id"
+  end
+
+  add_index "operations", ["acceptor_id"], name: "index_operations_on_acceptor_id", using: :btree
+  add_index "operations", ["payer_id"], name: "index_operations_on_payer_id", using: :btree
+  add_index "operations", ["service_id"], name: "index_operations_on_service_id", using: :btree
 
   create_table "payers", force: :cascade do |t|
     t.integer  "id_main"
@@ -43,4 +66,7 @@ ActiveRecord::Schema.define(version: 20160422054120) do
     t.datetime "updated_at",   null: false
   end
 
+  add_foreign_key "operations", "acceptors"
+  add_foreign_key "operations", "payers"
+  add_foreign_key "operations", "services"
 end
