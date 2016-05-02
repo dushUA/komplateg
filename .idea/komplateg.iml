@@ -189,6 +189,10 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.10.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.0.1, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crack (v0.4.3, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber (v2.3.3, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-core (v1.4.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v1.4.3, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-wire (v0.0.1, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="daemons (v1.2.3, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v1.5.1, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
@@ -208,6 +212,7 @@
     <orderEntry type="library" scope="PROVIDED" name="formatador (v0.2.5, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formulaic (v0.3.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fuubar (v2.0.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gherkin (v3.2.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.6, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard (v2.13.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard-annotate (v2.3, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
@@ -245,6 +250,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.0.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.8.4, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.11.2, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_test (v0.1.2, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nenv (v0.3.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="newrelic_rpm (v3.15.1.316, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.7.2, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
@@ -287,12 +293,14 @@
     <orderEntry type="library" scope="PROVIDED" name="ruby-rc4 (v0.1.5, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby2ruby (v2.3.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby_parser (v3.8.1, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v1.2.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="safe_yaml (v1.0.4, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.22, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.4, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="scss_lint (v0.48.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.1, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="seedbank (v0.3.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v2.53.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sexp_processor (v4.7.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="shellany (v0.0.1, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="shoulda-matchers (v3.1.1, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
@@ -320,6 +328,7 @@
     <orderEntry type="library" scope="PROVIDED" name="uniform_notifier (v1.9.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v2.3.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webmock (v1.24.3, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket (v1.2.3, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, RVM: ruby-2.2.3 [komplateg]) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">

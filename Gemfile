@@ -71,6 +71,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'formulaic'
@@ -78,6 +79,8 @@ group :test do
   gem 'shoulda-matchers', require: false
   gem 'timecop'
   gem 'webmock', require: false
+  gem 'cucumber'
+  gem 'cucumber-rails', require: false
 end
 
 group :staging, :production do

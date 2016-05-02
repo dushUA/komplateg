@@ -6,6 +6,14 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def help
+
+  end
+
+  def about
+
+  end
+
   def create
     # прямой путь работает, из параметра - нет.
     # надо upload на сервер в темп - парсить - удалять

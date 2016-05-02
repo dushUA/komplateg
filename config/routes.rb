@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
 
  resources :acceptors
- resources :static_pages
+
+ # resources :static_pages
+ get 'static_pages/help'
+ get 'static_pages/new'
+ get 'static_pages/index'
+ get 'static_pages/about'
+
  root 'static_pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

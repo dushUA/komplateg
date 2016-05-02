@@ -39,3 +39,8 @@ rerun.txt
 
 # vim artifacts
 **.swp
+
+*~
+.project
+.idea
+.secret
