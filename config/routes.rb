@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
 
- resources :acceptors
+  get 'users/new'
 
- # resources :static_pages
- get 'static_pages/help'
- get 'static_pages/new'
- get 'static_pages/index'
- get 'static_pages/about'
+  root 'static_pages#index'
 
- root 'static_pages#index'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/signup',   to: 'users#new',   via: 'get'
+  get 'static_pages/new'
+
+  resources :acceptors
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
