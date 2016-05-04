@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
-
   root 'static_pages#index'
 
   match '/help', to: 'static_pages#help', via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/signup',   to: 'users#new',   via: 'get'
   get 'static_pages/new'
-
+  resources :users
   resources :acceptors
 
 
