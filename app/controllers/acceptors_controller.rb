@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: acceptors
+#
+#  id               :integer          not null, primary key
+#  name_acceptor    :string
+#  bank_acceptor    :string
+#  account_acceptor :string
+#  key_acceptor     :string
+#  mfo_acceptor     :string
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
 class AcceptorsController < ApplicationController
   before_action :set_acceptor, only: [:show, :edit, :update, :destroy]
 
@@ -64,7 +78,7 @@ class AcceptorsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_acceptor
-      @acceptor = Acceptor.find(params[:id])
+      @acceptor = Acceptor.find_by_id(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

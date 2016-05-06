@@ -1,0 +1,13 @@
+-provide(:title, 'Sign in')
+%h1
+  Sign in
+.row
+  .col-xs-4.col-xs-offset-4
+    =simple_form_for(:session, url: sessions_path) do |f|
+      =f.input :email
+      =f.label :password, 'Password'
+      =f.password_field :password
+      =f.submit 'Sign in', class:'btn btn-large btn-primary'
+    %p
+      New user?
+      =link_to 'Sign up now!', signup_path

@@ -105,10 +105,10 @@ guard :haml do
   # watch(/^.+(\.html\.haml)$/)
 end
 
-guard 'migrate' do
-  watch(%r{^db/migrate/(\d+).+\.rb})
-  watch('db/seeds.rb')
-end
+# guard 'migrate' do
+#   watch(%r{^db/migrate/(\d+).+\.rb})
+#   watch('db/seeds.rb')
+# end
 
 # Guard-Rails supports a lot options with default values:
 # daemon: false                        # runs the server as a daemon.

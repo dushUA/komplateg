@@ -9,13 +9,15 @@ require 'capybara/dsl'
 require 'capybara/session'
 require 'selenium-webdriver'
 require 'capybara/cucumber'
-# require 'capybara/mechanize/cucumber'
+require 'capybara/mechanize/cucumber'
 
 require 'cucumber/rails'
 
 Capybara.ignore_hidden_elements = true
-Capybara.default_wait_time = 15
-Capybara.app_host = 'localhost'
+# Capybara.default_wait_time = 15
+Capybara.run_server = true
+Capybara.server_port = 7000
+Capybara.app_host = "http://localhost:#{Capybara.server_port}"
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
 # selectors in your step definitions to use the XPath syntax.

@@ -7,8 +7,10 @@ require 'shoulda/matchers'
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
+ActiveRecord::Base.establish_connection
+
 module Features
- # Extend this module in spec/support/features/*.rb
+ # Extend this module in spec/support/request/*.rb
 include Formulaic::Dsl
 end
 
@@ -17,4 +19,6 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
+  config.include Rails.application.routes.url_helpers
+
 end

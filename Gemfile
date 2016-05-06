@@ -71,6 +71,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'capybara-mechanize', '~> 1.5'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'email_spec'
@@ -81,6 +82,9 @@ group :test do
   gem 'webmock', require: false
   gem 'cucumber'
   gem 'cucumber-rails', require: false
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.4.2'
+  gem 'rspec-its'
 end
 
 group :staging, :production do
@@ -94,16 +98,13 @@ group :development, :test do
   gem 'brakeman', '~>3.2.1', require: false
   gem 'bundler-audit'
   gem 'byebug'
-  gem 'factory_girl_rails'
   gem 'fuubar', '~> 2.0.0'
   gem 'jasmine', ' 2.4.0'
   gem 'jasmine-jquery-rails'
   gem 'pry-rails'
   gem 'rails_best_practices', '~> 1.16.0'
-  gem 'rspec-rails', '~> 3.4.2'
   gem 'rubocop'
   gem 'scss_lint', require: false
   gem 'guard-rspec', require:  false
-  gem 'guard-jasmine', git: "git://github.com/guard/guard-jasmine.git", branch: "jasmine-2"
-
+  gem 'guard-jasmine', git: 'git://github.com/guard/guard-jasmine.git', branch: 'jasmine-2'
 end

@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'spec_helper'
 
 describe 'User pages' do
 
@@ -63,7 +62,7 @@ describe 'User pages' do
 
         let(:user) { User.find_by_email('user@example.com') }
 
-        it { should have_title(user.name) }
+        it { should have_title(full_title(user.name)) }
         it { should have_selector('div.alert.alert-success', text: 'Welcome') }
         it { should have_link('Sign out') }
       end

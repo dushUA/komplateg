@@ -19,7 +19,7 @@ end
 
 WebMock.disable_net_connect!(allow_localhost: true)
 Capybara.configure do |config|
-  config.run_server = false
-  config.default_driver = :selenium
-  config.app_host = 'http://127.0.0.1:3000/' # localhost(rails s)
+  config.run_server = true
+  config.server_port = 7000
+  config.app_host = "http://localhost:#{Capybara.server_port}"
 end
