@@ -18,6 +18,7 @@ RSpec.configure do |config|
 end
 
 WebMock.disable_net_connect!(allow_localhost: true)
+
 Capybara.configure do |config|
   config.run_server = true
   config.server_port = 7000

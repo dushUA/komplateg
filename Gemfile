@@ -29,7 +29,9 @@ gem 'haml-rails'
 gem 'seedbank'
 gem 'thin'
 gem 'pdf-reader'
-
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'

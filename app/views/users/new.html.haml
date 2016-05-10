@@ -4,11 +4,5 @@
 .row
   .col-xs-4.col-xs-offset-4
     =simple_form_for @user do |f|
-      =render 'shared/error_messages'
-      =f.input :name
-      =f.input :email
-      =f.label :password, 'Password'
-      =f.password_field :password
-      =f.label :password_confirmation, 'Confirmation'
-      =f.password_field :password_confirmation
+      =render 'fields', f: f
       =f.submit 'Create account', class:'btn btn-large btn-primary'
