@@ -1,9 +1,5 @@
 -provide(:title,'')
 .center.hero-unit
   %h1 Привет! это парсер коммунальных платежей Komplateg
-  =link_to 'Sign up', signup_path, class: 'btn btn-large btn-primary'
--#= link_to 'Получатели', acceptors_path
--#%br
--#=link_to 'File', static_pages_new_path
--#%br
--#=link_to 'Help', static_pages_help_path
+  -if !signed_in?
+    =link_to 'Sign up', signup_path, class: 'btn btn-large btn-primary'

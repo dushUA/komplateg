@@ -14,10 +14,10 @@
 
 FactoryGirl.define do
   factory :acceptor do
-    name_acceptor "MyString"
-    bank_acceptor "MyString"
-    account_acceptor "MyString"
-    key_acceptor "MyString"
-    mfo_acceptor "MyString"
+    name_acceptor 'Test Acceptor'
+        bank_acceptor 'Bank acceptor'
+        account_acceptor 'Account acceptor'
+        key_acceptor 'Key acceptor'
+        mfo_acceptor 'MFO acceptor'
   end
 end

@@ -19,3 +19,6 @@
                 %li=link_to 'Sign out', signout_path, method: 'delete'
           -else
             %li=link_to 'Sign in', signin_path
+-if signed_in?
+  .menu-base.center
+    =render 'layouts/menu_base'

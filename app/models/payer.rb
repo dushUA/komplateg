@@ -14,4 +14,5 @@
 #
 
 class Payer < ActiveRecord::Base
+  validates :fio, presence: true
 end

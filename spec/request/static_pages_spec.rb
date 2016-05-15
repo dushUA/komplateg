@@ -27,6 +27,19 @@ describe 'Static Pages' do
     let(:page_title){''}
 
     it_should_behave_like 'all static pages'
+
+    describe 'after sign in' do
+      let(:user) {FactoryGirl.create(:user)}
+      before do
+        sign_in user
+        visit root_path
+      end
+
+      it {should have_link('Acceptors', href: acceptors_path)}
+      it {should have_link('Payers', href: '#')}
+      it {should have_link('Services', href: '#')}
+      it {should have_link('Operations', href: '#')}
+    end
   end
 
   describe 'Help' do
@@ -44,4 +57,5 @@ describe 'Static Pages' do
 
     it_should_behave_like 'all static pages'
   end
+
 end

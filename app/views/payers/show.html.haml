@@ -1,0 +1,19 @@
+%p#notice= notice
+
+%p
+  %b FIO:
+  = @payer.fio
+%p
+  %b Address:
+  = @payer.adress
+%p
+  %b Invoice:
+  = @payer.invoice
+%p
+  %b Phone number:
+  = @payer.telephone
+%p
+  %b Payer's bank:
+  = @payer.bank_payer
+
+= link_to 'Back', payers_path

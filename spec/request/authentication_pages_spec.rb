@@ -29,8 +29,6 @@ describe 'Authentication', type: :request do
       let(:user) { FactoryGirl.create(:user) }
       before {sign_in(user)}
 
-      it { should have_title(user.name) }
-
       it { should have_link('Users',    href: users_path) }
       it { should have_link('Profile',  href: user_path(user)) }
       it { should have_link('Settings', href: edit_user_path(user)) }
@@ -40,6 +38,11 @@ describe 'Authentication', type: :request do
       describe 'followed by signout' do
         before { click_link 'Sign out' }
         it { should have_link('Sign in') }
+      end
+
+      describe 'return to home page' do
+        before {click_link 'Home'}
+        it { should_not have_link('Sign up', href: signup_path)}
       end
     end
   end
@@ -81,6 +84,20 @@ describe 'Authentication', type: :request do
         end
       end
 
+      describe 'in the Acceptors controller' do
+        describe 'visiting the acceptors index' do
+          before { visit acceptors_path }
+          it { should have_title('Sign in') }
+        end
+      end
+
+      describe 'in the Payers controller' do
+        describe 'visiting the payers index' do
+          before { visit payers_path }
+          it { should have_title('Sign in') }
+        end
+      end
+
       describe 'when attempting to visit a protected page' do
         before do
           visit edit_user_path(user)
@@ -102,10 +119,6 @@ describe 'Authentication', type: :request do
               fill_in 'Email',    with: user.email
               fill_in 'Password', with: user.password
               click_button 'Sign in'
-            end
-
-            it 'should render the default (profile) page' do
-              expect(page).to have_title(user.name)
             end
           end
         end

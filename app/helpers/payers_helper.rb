@@ -13,13 +13,5 @@
 #  updated_at :datetime         not null
 #
 
-FactoryGirl.define do
-  factory :payer do
-    id_main 1
-    fio 'Ivanov Ivan'
-    adress 'home adress'
-    invoice '1234 **** **** 5678'
-    telephone '555-23-46'
-    bank_payer 'Test bank'
-  end
+module PayersHelper
 end

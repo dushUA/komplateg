@@ -13,7 +13,8 @@
 #
 
 class AcceptorsController < ApplicationController
-  before_action :set_acceptor, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user, only: [:index, :show]
+  before_action :set_acceptor, only: [:show]
 
   # GET /acceptors
   # GET /acceptors.json
@@ -27,53 +28,53 @@ class AcceptorsController < ApplicationController
   end
 
   # GET /acceptors/new
-  def new
-    @acceptor = Acceptor.new
-  end
+  # def new
+  #   @acceptor = Acceptor.new
+  # end
 
   # GET /acceptors/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /acceptors
   # POST /acceptors.json
-  def create
-    @acceptor = Acceptor.new(acceptor_params)
-
-    respond_to do |format|
-      if @acceptor.save
-        format.html { redirect_to @acceptor, notice: 'Acceptor was successfully created.' }
-        format.json { render :show, status: :created, location: @acceptor }
-      else
-        format.html { render :new }
-        format.json { render json: @acceptor.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def create
+  #   @acceptor = Acceptor.new(acceptor_params)
+  #
+  #   respond_to do |format|
+  #     if @acceptor.save
+  #       format.html { redirect_to @acceptor, notice: 'Acceptor was successfully created.' }
+  #       format.json { render :show, status: :created, location: @acceptor }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @acceptor.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # PATCH/PUT /acceptors/1
   # PATCH/PUT /acceptors/1.json
-  def update
-    respond_to do |format|
-      if @acceptor.update(acceptor_params)
-        format.html { redirect_to @acceptor, notice: 'Acceptor was successfully updated.' }
-        format.json { render :show, status: :ok, location: @acceptor }
-      else
-        format.html { render :edit }
-        format.json { render json: @acceptor.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @acceptor.update(acceptor_params)
+  #       format.html { redirect_to @acceptor, notice: 'Acceptor was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @acceptor }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @acceptor.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /acceptors/1
   # DELETE /acceptors/1.json
-  def destroy
-    @acceptor.destroy
-    respond_to do |format|
-      format.html { redirect_to acceptors_url, notice: 'Acceptor was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @acceptor.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to acceptors_url, notice: 'Acceptor was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

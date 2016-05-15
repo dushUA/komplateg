@@ -1,0 +1,9 @@
+%h1 Listing services
+
+.container
+  .row.table-base
+    .col-lg-2 Name service
+
+  - @services.each do |service|
+    .row.table-base
+      .col-lg-2= service.name_service
