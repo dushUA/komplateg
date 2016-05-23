@@ -28,6 +28,7 @@ gem 'haml-rails'
 # other
 gem 'seedbank'
 gem 'thin'
+gem 'paperclip'
 gem 'pdf-reader'
 gem 'faker'
 gem 'will_paginate'

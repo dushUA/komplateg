@@ -22,18 +22,6 @@
 #  user_id            :integer
 #
 
-class Operation < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :acceptor
-  belongs_to :payer
-  belongs_to :service
-
-  default_scope -> {order :period_pay_start}
-
-  validates :user_id, presence: true
-  validates :acceptor_id, presence: true
-  validates :payer_id, presence: true
-  validates :service_id, presence: true
-  validates :sum_operation, presence: true
+module OperationsHelper
 
 end

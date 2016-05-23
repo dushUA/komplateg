@@ -14,6 +14,8 @@
 
 class User < ActiveRecord::Base
   has_secure_password
+  has_many :operations, dependent: :destroy
+  has_many :pdf_files
 
   before_save { email.downcase! }
   before_create :create_remember_token

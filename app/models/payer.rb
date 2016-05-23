@@ -14,5 +14,6 @@
 #
 
 class Payer < ActiveRecord::Base
+  has_many :operations
   validates :fio, presence: true
 end

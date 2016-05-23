@@ -13,6 +13,8 @@
 #
 
 class Acceptor < ActiveRecord::Base
+  has_many :operations
+
   validates :name_acceptor, presence: true
   validates :mfo_acceptor, uniqueness: true
 end

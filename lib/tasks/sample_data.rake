@@ -7,7 +7,7 @@ namespace :db do
                  password: 'foobar',
                  password_confirmation: 'foobar',
                  admin: true)
-    99.times do |n|
+    20.times do |n|
       name = Faker::Name.name
       email = "example-#{n+1}@railstutorial.org"
       password = 'password'
@@ -62,6 +62,40 @@ namespace :db do
     10.times do |n|
       name_service = Faker::Commerce.product_name
       Service.create!(name_service: name_service)
+    end
+
+    # fill Operations table
+    100.times do |n|
+      date_time_pay = Faker::Time.between(1.year.ago, Date.today, :day)
+      date_valut = date_time_pay
+      num_ticket = Faker::Number.number(4)
+      code_ticket = Faker::Number.number(4)
+      key_operation = Faker::Number.number(4)
+      destination = Faker::Lorem.sentence(3)
+      sum_operation = Faker::Number.decimal(2)
+      currency_operation = 'UAH'
+      priv_acc_payer = Faker::Number.number(4)
+      period_pay_start = date_time_pay.at_beginning_of_month
+      period_pay_end = date_time_pay.at_end_of_month
+      payer_id = Faker::Number.between(1, 5)
+      acceptor_id = Faker::Number.between(1, 20)
+      service_id = Faker::Number.between(1, 10)
+      user_id = Faker::Number.between(1, 2)
+      Operation.create!(date_time_pay: date_time_pay,
+                         date_valut: date_valut,
+                         num_ticket: num_ticket,
+                         code_ticket: code_ticket,
+                         key_operation: key_operation,
+                         destination: destination,
+                         sum_operation: sum_operation,
+                         currency_operation: currency_operation,
+                         priv_acc_payer: priv_acc_payer,
+                         period_pay_start: period_pay_start,
+                         period_pay_end: period_pay_end,
+                         payer_id: payer_id,
+                         acceptor_id: acceptor_id,
+                         service_id: service_id,
+                         user_id: user_id)
     end
   end
 end

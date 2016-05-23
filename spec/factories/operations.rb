@@ -19,23 +19,24 @@
 #  payer_id           :integer
 #  acceptor_id        :integer
 #  service_id         :integer
-#
+#  user_id            :integer
 
 FactoryGirl.define do
   factory :operation do
-    id_payer 1
-    id_acceptor 1
-    id_service 1
+    payer
+    acceptor
+    service
+    user
     date_time_pay "2016-04-25 09:44:00"
     date_valut "2016-04-25"
     num_ticket "MyString"
     code_ticket "MyString"
     key_operation "MyString"
     destination "MyText"
-    sum_operation ""
-    currency_operation "MyString"
+    sum_operation "20.54"
+    currency_operation "uah"
     priv_acc_payer "MyString"
-    period_pay_start "2016-04-25"
-    period_pay_end "2016-04-25"
+    period_pay_start "2016-04-01"
+    period_pay_end "2016-04-30"
   end
 end

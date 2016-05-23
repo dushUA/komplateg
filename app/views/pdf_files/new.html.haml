@@ -1,0 +1,11 @@
+.page-header
+  %h1
+    Upload PDF
+
+= form_for @attached_pdfs, :html => { :multipart => true } do |f|
+  -#= render 'shared/error_messages', object: @attached_pdfs
+  .form-group
+    = f.label :attach_file
+    = f.file_field :attach_file, class: 'form-control'
+
+  = f.submit 'Upload', class: 'btn btn-primary'

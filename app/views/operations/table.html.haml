@@ -1,0 +1,37 @@
+-provide(:title, 'Table')
+%h1
+  Table
+-if current_user.operations.any?
+  -#=will_paginate @operations
+  %h3
+    Sum all operations
+    =@sum_oper
+  .container
+    .row.table-base
+      .col-lg-1 Num ticket
+      .col-lg-1 Date pay
+      .col-lg-1 Payer
+      .col-lg-1 Acceptor
+      .col-lg-1 Service
+      .col-lg-1 Destination
+      .col-lg-1 Sum
+      .col-lg-1
+    - @operations.each do |operation|
+      .row.table-base
+        .col-lg-1= operation.num_ticket
+        .col-lg-1= operation.date_time_pay
+        .col-lg-1= operation.payer.fio
+        .col-lg-1= operation.acceptor.name_acceptor
+        .col-lg-1= operation.service.name_service
+        .col-lg-1= operation.destination
+        .col-lg-1= "#{operation.sum_operation} #{operation.currency_operation}"
+        .col-lg-1= link_to 'Show', '#'
+    .row.table-base
+      .col-lg-1 Count
+      .col-lg-1= @operations.count
+      .col-lg-1
+      .col-lg-1
+      .col-lg-1
+      .col-lg-1 Sum all operations
+      .col-lg-1= @sum_oper
+  -#=will_paginate @operations

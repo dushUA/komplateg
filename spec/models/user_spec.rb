@@ -121,4 +121,31 @@ describe User do
 
     it {should be_admin}
   end
+
+  describe 'operation associations' do
+    let(:acceptor){ FactoryGirl.create(:acceptor)}
+    let(:payer){ FactoryGirl.create(:payer)}
+    let(:service){ FactoryGirl.create(:service)}
+
+    before { @user.save }
+    let!(:older_operation) do
+      FactoryGirl.create(:operation, user: @user, acceptor: acceptor, payer: payer, service: service, period_pay_start: 1.day.ago)
+    end
+    let!(:newer_operation) do
+      FactoryGirl.create(:operation, user: @user, acceptor: acceptor, payer: payer, service: service, period_pay_start: 1.hour.ago)
+    end
+
+    it 'should have the right operations in the right order' do
+      expect(@user.operations.to_a).to eq [older_operation, newer_operation]
+    end
+
+    it 'should destroy associated operations' do
+      operations = @user.operations.to_a
+      @user.destroy
+      expect(operations).not_to be_empty
+      operations.each do |operation|
+        expect(Operation.where(id: operation.id)).to be_empty
+      end
+    end
+  end
 end

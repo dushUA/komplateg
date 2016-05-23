@@ -5,3 +5,9 @@
       %h1
         =gravatar_for @user
         #{@user.name}
+.row
+  -@pdf_files.each do |f|
+    =f.attach_file_file_name
+    =f.attach_file_updated_at
+    %br
+

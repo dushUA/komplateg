@@ -3,7 +3,7 @@
   Update your profile
 .row
   .col-xs-4.col-xs-offset-4
-    =simple_form_for @user do |f|
+    =simple_form_for @user, :html => {:multipart => true}  do |f|
       =render 'fields', f: f
       =f.submit 'Save changes', class:'btn btn-large btn-primary'
     =gravatar_for @user

@@ -22,18 +22,32 @@
 #  user_id            :integer
 #
 
-class Operation < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :acceptor
-  belongs_to :payer
-  belongs_to :service
+class OperationsController < ApplicationController
+  before_action :signed_in_user
+  def index
+  end
 
-  default_scope -> {order :period_pay_start}
+  def table
+    @operations = current_user.operations
+    @sum_oper = @operations.map(&:sum_operation).inject(:+)
+  end
 
-  validates :user_id, presence: true
-  validates :acceptor_id, presence: true
-  validates :payer_id, presence: true
-  validates :service_id, presence: true
-  validates :sum_operation, presence: true
+  def chart
+  end
+
+  def show
+  end
+
+  def destroy
+  end
+
+  def update
+  end
+
+  def edit
+  end
+
+  def create
+  end
 
 end

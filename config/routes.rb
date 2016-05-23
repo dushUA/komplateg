@@ -17,8 +17,14 @@ Rails.application.routes.draw do
   resources :acceptors, only: [:index, :show]
   resources :payers, only: [:index, :show]
   resources :services, only: [:index]
+  resources :pdf_files
 
-
+  resources :operations do
+    collection do
+      get 'table'
+      get 'chart'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

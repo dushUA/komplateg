@@ -11,6 +11,7 @@ RSpec.describe Payer, type: :modelest  do
   it { should respond_to(:invoice) }
   it { should respond_to(:telephone) }
   it { should respond_to(:bank_payer) }
+  it { should respond_to(:operations) }
 
   it {should be_valid}
 

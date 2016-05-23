@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510074613) do
+ActiveRecord::Schema.define(version: 20160522075607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,11 +43,13 @@ ActiveRecord::Schema.define(version: 20160510074613) do
     t.integer  "payer_id"
     t.integer  "acceptor_id"
     t.integer  "service_id"
+    t.integer  "user_id"
   end
 
   add_index "operations", ["acceptor_id"], name: "index_operations_on_acceptor_id", using: :btree
   add_index "operations", ["payer_id"], name: "index_operations_on_payer_id", using: :btree
   add_index "operations", ["service_id"], name: "index_operations_on_service_id", using: :btree
+  add_index "operations", ["user_id"], name: "index_operations_on_user_id", using: :btree
 
   create_table "payers", force: :cascade do |t|
     t.integer  "id_main"
@@ -59,6 +61,17 @@ ActiveRecord::Schema.define(version: 20160510074613) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "pdf_files", force: :cascade do |t|
+    t.integer  "user_id"
+    t.boolean  "prepared",                 default: false
+    t.string   "attach_file_file_name"
+    t.string   "attach_file_content_type"
+    t.integer  "attach_file_file_size"
+    t.datetime "attach_file_updated_at"
+  end
+
+  add_index "pdf_files", ["user_id"], name: "index_pdf_files_on_user_id", using: :btree
 
   create_table "services", force: :cascade do |t|
     t.string   "name_service"
@@ -82,4 +95,6 @@ ActiveRecord::Schema.define(version: 20160510074613) do
   add_foreign_key "operations", "acceptors"
   add_foreign_key "operations", "payers"
   add_foreign_key "operations", "services"
+  add_foreign_key "operations", "users"
+  add_foreign_key "pdf_files", "users"
 end

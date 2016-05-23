@@ -36,9 +36,9 @@ describe 'Static Pages' do
       end
 
       it {should have_link('Acceptors', href: acceptors_path)}
-      it {should have_link('Payers', href: '#')}
-      it {should have_link('Services', href: '#')}
-      it {should have_link('Operations', href: '#')}
+      it {should have_link('Payers', href: payers_path)}
+      it {should have_link('Services', href: services_path)}
+      it {should have_link('Operations', href: operations_path)}
     end
   end
 

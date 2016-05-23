@@ -15,6 +15,7 @@ RSpec.describe Acceptor, type: :modelest  do
   it { should respond_to(:account_acceptor) }
   it { should respond_to(:key_acceptor) }
   it { should respond_to(:mfo_acceptor) }
+  it { should respond_to(:operations) }
 
   it {should be_valid}
 
