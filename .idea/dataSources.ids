@@ -10,8 +10,8 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>18678</introspection-state-number>
-        <introspection-timestamp>2016-05-23.09:19:07.853</introspection-timestamp>
+        <introspection-state-number>18680</introspection-state-number>
+        <introspection-timestamp>2016-05-23.15:48:38.280</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="acceptors_id_seq">
         <object-id>36684</object-id>
@@ -51,7 +51,7 @@
       </table>
       <table id="12" parent="2" name="pdf_files">
         <object-id>38875</object-id>
-        <state-number>18678</state-number>
+        <state-number>18680</state-number>
       </table>
       <table id="13" parent="2" name="schema_migrations">
         <object-id>36766</object-id>
@@ -239,6 +239,7 @@
       </foreign-key>
       <foreign-key id="53" parent="10" name="fk_rails_63fbf4e94e">
         <columns>user_id</columns>
+        <ref-key>~.users.users_pkey</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
@@ -462,40 +463,40 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>18644</introspection-state-number>
-        <introspection-timestamp>2016-05-23.09:19:07.783</introspection-timestamp>
+        <introspection-state-number>19147</introspection-state-number>
+        <introspection-timestamp>2016-05-30.07:51:32.323</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="acceptors_id_seq">
         <object-id>36773</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <sequence id="4" parent="2" name="operations_id_seq">
         <object-id>36784</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <sequence id="5" parent="2" name="payers_id_seq">
         <object-id>36799</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <sequence id="6" parent="2" name="services_id_seq">
         <object-id>36810</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <sequence id="7" parent="2" name="users_id_seq">
         <object-id>36821</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <table id="8" parent="2" name="acceptors">
         <object-id>36775</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <table id="9" parent="2" name="operations">
         <object-id>36786</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <table id="10" parent="2" name="payers">
         <object-id>36801</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <table id="11" parent="2" name="schema_migrations">
         <object-id>36855</object-id>
@@ -503,11 +504,11 @@
       </table>
       <table id="12" parent="2" name="services">
         <object-id>36812</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <table id="13" parent="2" name="users">
         <object-id>36823</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <column id="14" parent="8" name="id">
         <state-number>16555</state-number>
@@ -851,40 +852,40 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>18644</introspection-state-number>
-        <introspection-timestamp>2016-05-23.09:19:07.771</introspection-timestamp>
+        <introspection-state-number>19147</introspection-state-number>
+        <introspection-timestamp>2016-05-30.07:51:32.326</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="acceptors_id_seq">
         <object-id>36773</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <sequence id="4" parent="2" name="operations_id_seq">
         <object-id>36784</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <sequence id="5" parent="2" name="payers_id_seq">
         <object-id>36799</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <sequence id="6" parent="2" name="services_id_seq">
         <object-id>36810</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <sequence id="7" parent="2" name="users_id_seq">
         <object-id>36821</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </sequence>
       <table id="8" parent="2" name="acceptors">
         <object-id>36775</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <table id="9" parent="2" name="operations">
         <object-id>36786</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <table id="10" parent="2" name="payers">
         <object-id>36801</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <table id="11" parent="2" name="schema_migrations">
         <object-id>36855</object-id>
@@ -892,11 +893,11 @@
       </table>
       <table id="12" parent="2" name="services">
         <object-id>36812</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <table id="13" parent="2" name="users">
         <object-id>36823</object-id>
-        <state-number>18644</state-number>
+        <state-number>19147</state-number>
       </table>
       <column id="14" parent="8" name="id">
         <state-number>16555</state-number>

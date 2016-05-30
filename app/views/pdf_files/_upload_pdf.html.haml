@@ -1,0 +1,5 @@
+= simple_form_for @attached_pdfs, :html => { :multipart => true } do |f|
+  .form-group
+    = f.label :attach_file
+    = f.file_field :attach_file, class: 'form-control', accept: 'application/pdf'
+    = f.submit 'Upload', class: 'btn btn-primary'

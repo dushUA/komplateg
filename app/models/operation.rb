@@ -9,7 +9,7 @@
 #  code_ticket        :string
 #  key_operation      :string
 #  destination        :text
-#  sum_operation      :money
+#  sum_operation      :decimal(12, 2)   default(0.0)
 #  currency_operation :string
 #  priv_acc_payer     :string
 #  period_pay_start   :date

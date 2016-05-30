@@ -24,12 +24,12 @@ RSpec.describe Acceptor, type: :modelest  do
     it { should_not be_valid }
   end
 
-  describe 'when MFO is already taken' do
-    before do
-      acceptor_with_same_mfo = @acceptor.dup
-      acceptor_with_same_mfo.mfo_acceptor = @acceptor.mfo_acceptor
-      acceptor_with_same_mfo.save
-    end
-    it { should_not be_valid }
-  end
+  # describe 'when MFO is already taken' do
+  #   before do
+  #     acceptor_with_same_mfo = @acceptor.dup
+  #     acceptor_with_same_mfo.mfo_acceptor = @acceptor.mfo_acceptor
+  #     acceptor_with_same_mfo.save
+  #   end
+  #   it { should_not be_valid }
+  # end
 end

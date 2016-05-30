@@ -33,13 +33,13 @@ ActiveRecord::Schema.define(version: 20160522075607) do
     t.string   "code_ticket"
     t.string   "key_operation"
     t.text     "destination"
-    t.money    "sum_operation",      scale: 2
+    t.decimal  "sum_operation", default: 0.0, precision: 12, scale: 2
     t.string   "currency_operation"
     t.string   "priv_acc_payer"
     t.date     "period_pay_start"
     t.date     "period_pay_end"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "payer_id"
     t.integer  "acceptor_id"
     t.integer  "service_id"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20160522075607) do
   add_index "operations", ["user_id"], name: "index_operations_on_user_id", using: :btree
 
   create_table "payers", force: :cascade do |t|
-    t.integer  "id_main"
+    t.integer  "id_main", null: false, default: 0
     t.string   "fio"
     t.string   "adress"
     t.string   "invoice"

@@ -38,7 +38,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
-    @pdf_files = @user.pdf_files
   end
 
   def edit

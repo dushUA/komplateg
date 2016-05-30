@@ -7,7 +7,7 @@ class CreateOperations < ActiveRecord::Migration
       t.string :code_ticket
       t.string :key_operation
       t.text :destination
-      t.money :sum_operation
+      t.decimal :sum_operation, default: 0.0, precision: 12, scale: 2
       t.string :currency_operation
       t.string :priv_acc_payer
       t.date :period_pay_start

@@ -3,7 +3,7 @@
 # Table name: payers
 #
 #  id         :integer          not null, primary key
-#  id_main    :integer
+#  id_main    :integer          default(0), not null
 #  fio        :string
 #  adress     :string
 #  invoice    :string

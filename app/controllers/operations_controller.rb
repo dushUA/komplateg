@@ -29,6 +29,7 @@ class OperationsController < ApplicationController
 
   def table
     @operations = current_user.operations
+    @attached_pdfs = current_user.pdf_files.new
     @sum_oper = @operations.map(&:sum_operation).inject(:+)
   end
 
