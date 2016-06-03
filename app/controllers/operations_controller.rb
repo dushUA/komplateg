@@ -37,6 +37,7 @@ class OperationsController < ApplicationController
   end
 
   def show
+    @operation = Operation.find_by_id(params[:id])
   end
 
   def destroy

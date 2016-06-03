@@ -1,0 +1,17 @@
+%tr
+  %td
+    =operation.num_ticket
+  %td
+    =operation.date_time_pay
+  %td
+    =operation.payer.fio
+  %td
+    =operation.acceptor.name_acceptor
+  %td
+    =operation.service.name_service
+  %td
+    =operation.destination
+  %td
+    =number_to_currency(operation.sum_operation, precision: 2, format: '%n %u', unit: operation.currency_operation)
+  %td
+    =link_to 'Show', operation
