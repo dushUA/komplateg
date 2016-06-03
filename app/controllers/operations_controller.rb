@@ -34,6 +34,7 @@ class OperationsController < ApplicationController
   end
 
   def chart
+    @series = current_user.operations.map{|operation| [operation.acceptor.name_acceptor, operation.sum_operation.to_f]}
   end
 
   def show

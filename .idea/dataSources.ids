@@ -466,48 +466,48 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>20111</introspection-state-number>
-        <introspection-timestamp>2016-06-02.13:40:55.361</introspection-timestamp>
+        <introspection-state-number>20269</introspection-state-number>
+        <introspection-timestamp>2016-06-03.11:42:54.178</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="acceptors_id_seq">
         <object-id>39572</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="4" parent="2" name="operations_id_seq">
         <object-id>39583</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="5" parent="2" name="payers_id_seq">
         <object-id>39599</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="6" parent="2" name="pdf_files_id_seq">
         <object-id>39610</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="7" parent="2" name="services_id_seq">
         <object-id>39623</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="8" parent="2" name="users_id_seq">
         <object-id>39634</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <table id="9" parent="2" name="acceptors">
         <object-id>39574</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="10" parent="2" name="operations">
         <object-id>39585</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="11" parent="2" name="payers">
         <object-id>39601</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="12" parent="2" name="pdf_files">
         <object-id>39612</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="13" parent="2" name="schema_migrations">
         <object-id>39673</object-id>
@@ -515,11 +515,11 @@
       </table>
       <table id="14" parent="2" name="services">
         <object-id>39625</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="15" parent="2" name="users">
         <object-id>39636</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <column id="16" parent="9" name="id">
         <state-number>19304</state-number>
@@ -917,48 +917,48 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>20111</introspection-state-number>
-        <introspection-timestamp>2016-06-02.13:40:55.358</introspection-timestamp>
+        <introspection-state-number>20269</introspection-state-number>
+        <introspection-timestamp>2016-06-03.11:42:54.176</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="acceptors_id_seq">
         <object-id>39572</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="4" parent="2" name="operations_id_seq">
         <object-id>39583</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="5" parent="2" name="payers_id_seq">
         <object-id>39599</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="6" parent="2" name="pdf_files_id_seq">
         <object-id>39610</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="7" parent="2" name="services_id_seq">
         <object-id>39623</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <sequence id="8" parent="2" name="users_id_seq">
         <object-id>39634</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </sequence>
       <table id="9" parent="2" name="acceptors">
         <object-id>39574</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="10" parent="2" name="operations">
         <object-id>39585</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="11" parent="2" name="payers">
         <object-id>39601</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="12" parent="2" name="pdf_files">
         <object-id>39612</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="13" parent="2" name="schema_migrations">
         <object-id>39673</object-id>
@@ -966,11 +966,11 @@
       </table>
       <table id="14" parent="2" name="services">
         <object-id>39625</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <table id="15" parent="2" name="users">
         <object-id>39636</object-id>
-        <state-number>20111</state-number>
+        <state-number>20269</state-number>
       </table>
       <column id="16" parent="9" name="id">
         <state-number>19304</state-number>

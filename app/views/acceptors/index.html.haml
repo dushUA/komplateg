@@ -1,19 +1,13 @@
 %h1 Listing acceptors
 
 .container
-  .row.table-base
-    .col-lg-2 Name acceptor
-    .col-lg-2 Bank acceptor
-    .col-lg-2 Account acceptor
-    .col-lg-2 Key acceptor
-    .col-lg-2 MFO acceptor
-    .col-lg-2
-  - @acceptors.each do |acceptor|
-    .row.table-base
-      .col-lg-2= acceptor.name_acceptor
-      .col-lg-2= acceptor.bank_acceptor
-      .col-lg-2= acceptor.account_acceptor
-      .col-lg-2= acceptor.key_acceptor
-      .col-lg-2= acceptor.mfo_acceptor
-      .col-lg-2= link_to 'Show', acceptor
-
+  %table.table.table-bordered.table-striped.table-hover.table-condensed
+    %thead
+      %tr
+        %th Name acceptor
+        %th Bank acceptor
+        %th Account acceptor
+        %th Key acceptor
+        %th MFO acceptor
+    %tbody
+      =render @acceptors

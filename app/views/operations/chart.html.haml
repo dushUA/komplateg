@@ -1,3 +1,6 @@
 -provide(:title, 'Chart')
 %h1
   Chart
+.chart
+  =column_chart(@series)
+  =@series

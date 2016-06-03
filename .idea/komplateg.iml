@@ -339,6 +339,7 @@
     <orderEntry type="library" scope="PROVIDED" name="capybara (v2.7.1, RVM: ruby-2.3.1 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara-mechanize (v1.5.0, RVM: ruby-2.3.1 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara-webkit (v1.11.1, RVM: ruby-2.3.1 [komplateg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chartkick (v2.0.0, RVM: ruby-2.3.1 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.5.9, RVM: ruby-2.3.1 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="climate_control (v0.0.3, RVM: ruby-2.3.1 [komplateg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cocaine (v0.5.8, RVM: ruby-2.3.1 [komplateg]) [gem]" level="application" />

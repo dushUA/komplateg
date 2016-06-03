@@ -102,9 +102,11 @@ class ParsePlat
                                                  service: service,
                                                  user: @user)
 
+
         operation ? @out_params[:added]+=1 : @out_params[:errors] +=1
 
       end
     end
+
   end
 end
