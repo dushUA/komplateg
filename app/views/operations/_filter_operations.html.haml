@@ -1,0 +1,7 @@
+.container
+  Filter
+  = form_tag table_operations_path, method: 'get', id: 'filter' do
+    = label_tag 'FIO'
+    = text_field_tag :payer_fio
+    -#= text_field_tag :value_two
+    = submit_tag 'Submit Filter'

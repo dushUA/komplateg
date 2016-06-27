@@ -107,6 +107,5 @@ class ParsePlat
 
       end
     end
-
   end
 end
