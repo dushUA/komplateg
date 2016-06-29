@@ -22,11 +22,15 @@ class PdfFilesController < ApplicationController
   end
 
   def create
-    @attached_pdfs = current_user.pdf_files.new(pdf_files_params)
-    if @attached_pdfs.save
-      @text_pdf = parse_pdf @attached_pdfs.id
-      flash[:success] = 'The PDF was added! Card imported: '+@text_pdf[:added].to_s
-      flash[:danger] = 'Card with error: '+@text_pdf[:errors] if @text_pdf[:errors]>0
+    if params[:pdf_file]
+      @attached_pdfs = current_user.pdf_files.new(pdf_files_params)
+      if @attached_pdfs.save
+        @text_pdf = parse_pdf @attached_pdfs.id
+        flash[:success] = 'The PDF was added! Card imported: '+@text_pdf[:added].to_s
+        flash[:danger] = 'Card with error: '+@text_pdf[:errors] if @text_pdf[:errors]>0
+      end
+    else
+      flash[:danger] = 'File name is empty'
     end
     redirect_to table_operations_path
   end

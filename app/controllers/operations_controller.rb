@@ -31,14 +31,23 @@ class OperationsController < ApplicationController
     filter = []
     if params[:payer_fio].present?
       p_fio = params[:payer_fio].mb_chars.downcase
-      payers = Payer.select('id').where('lower(fio) LIKE ?', "#{p_fio}%")
-      payers.each {|p| filter << p.id}
+      payers_ids = Payer.select('id')
+                              .where('lower(fio) LIKE ?', "#{p_fio}%").ids
+      filter << ["payer_id IN (#{payers_ids.map(&:inspect).join(',')})"]
     end
 
-    if !filter.empty?
-      @operations = Operation.includes(:user, :acceptor, :payer, :service).where(user_id: current_user.id).where(payer_id: filter  )
+    if params[:acceptor_name].present?
+      a_name = params[:acceptor_name].mb_chars.downcase
+      acceptors_ids = Acceptor.select('id')
+                                    .where('lower(name_acceptor) LIKE ?', "%#{a_name}%").ids
+      filter << ["acceptor_id IN (#{acceptors_ids.map(&:inspect).join(',')})"]
+    end
+
+    if filter.present?
+      @operations = current_user.operations.includes(:payer, :acceptor,  :service)
+                        .where(filter.join(' AND '))
     else
-      @operations = current_user.operations.includes(:user, :acceptor, :payer, :service)
+      @operations = current_user.operations.includes(:payer, :acceptor, :service)
     end
 
     @attached_pdfs = current_user.pdf_files.new
