@@ -11,13 +11,20 @@
       %caption Sum all operations #{@sum_oper}
       %thead
         %tr
-          %th Num ticket
-          %th Date pay
-          %th Payer
-          %th Acceptor
-          %th Service
-          %th Destination
-          %th Sum
+          %th
+            =sort_link @search, :num_ticket, 'Num ticket'
+          %th
+            =sort_link @search, :date_time_pay, 'Date pay'
+          %th
+            =sort_link @search, :payer_fio, 'Payer'
+          %th
+            =sort_link @search, :acceptor_name_acceptor, 'Acceptor'
+          %th
+            =sort_link @search, :service_name_service, 'Service'
+          %th
+            =sort_link @search, :destination, 'Destination'
+          %th
+            =sort_link @search, :sum_operation, 'Sum'
           %th
       %tbody
         =render @operations

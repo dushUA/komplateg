@@ -1,8 +1,18 @@
 .container
-  Filter
-  = form_tag table_operations_path, method: 'get', id: 'filter' do
-    = label_tag 'FIO'
-    = text_field_tag :payer_fio
-    = label_tag "Acceptor's name"
-    = text_field_tag :acceptor_name
-    = submit_tag 'Submit Filter'
+  = search_form_for @search, url: table_operations_path do |f|
+    =f.label :payer_fio_cont, 'FIO'
+    =f.text_field :payer_fio_cont
+    =f.label :acceptor_name_acceptor_cont, "Acceptor's name"
+    =f.text_field :acceptor_name_acceptor_cont
+    =f.label 'Date pay (range)'
+    #datepicker.input-daterange.input-group
+      =f.text_field :date_time_pay_gteq, class: 'input-sm form-control', 'data-provide' => 'datepicker'
+      %span.input-group-addon
+        to
+      =f.text_field :date_time_pay_lteq, class: 'input-sm form-control', 'data-provide' => 'datepicker'
+
+    =f.label :service_name_service_cont, 'Service'
+    =f.text_field :service_name_service_cont
+    =f.label :destination_cont, 'Destination'
+    =f.text_field :destination_cont
+    =f.submit 'Search'

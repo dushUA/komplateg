@@ -67,6 +67,8 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-datepicker-rails (1.6.1.1)
+      railties (>= 3.0)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -303,6 +305,8 @@ GEM
       ttfunk
     pg (0.18.4)
     phantomjs (2.1.1.0)
+    polyamorous (1.3.0)
+      activerecord (>= 3.0)
     powerpack (0.1.1)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -355,6 +359,12 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
     rake (11.1.2)
+    ransack (1.7.0)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -493,6 +503,7 @@ DEPENDENCIES
   awesome_print
   bcrypt
   better_errors
+  bootstrap-datepicker-rails (~> 1.6, >= 1.6.1.1)
   bootstrap-sass
   bootstrap-will_paginate
   brakeman (~> 3.2.1)
@@ -539,6 +550,7 @@ DEPENDENCIES
   rails_12factor
   rails_best_practices (~> 1.16.0)
   rails_layout
+  ransack
   rspec-its
   rspec-rails (~> 3.4.2)
   rubocop
